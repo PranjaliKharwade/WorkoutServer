@@ -1,6 +1,6 @@
 # Start with the base image containing Java runtime
 #FROM openjdk:8
-FROM workoutserver:testsnapshot
+FROM aarshad88/workoutapp:0.1.1-SNAPSHOT
 # Add a volume pointing to /tmp
 VOLUME /tmp
 # Make port 8081 available to the world outside this container
