@@ -8,6 +8,6 @@ EXPOSE 8090
 # The application's jar file
 ARG JAR_FILE=target/Workout-0.0.1-SNAPSHOT.jar
 # Add the application's jar to the container
-ADD target/Workout-0.0.1-SNAPSHOT.jar /var/lib/jenkins/workspace/Test_Job/test
+ADD "target/Workout-0.0.1-SNAPSHOT.jar" "/var/lib/jenkins/workspace/Test_Job/test"
 #  Run the jar file
 ENTRYPOINT ["java","-jar","Workout-0.0.1-SNAPSHOT.jar"]
