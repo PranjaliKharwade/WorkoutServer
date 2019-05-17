@@ -5,11 +5,17 @@ node {
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
         println commit_id
-		
-        stage "maven"
-
-                sh 'mvn  package'
-            
+		stages {
+        stage('Build') { 
+            steps {
+                sh 'mvn -B -DskipTests clean package' 
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+         }  
         stage "build"
         def app = docker.build "aarshad88/workoutapp:0.1.1-SNAPSHOT"
     
@@ -17,4 +23,4 @@ node {
         app.push 'master'
         app.push "${commit_id}"
     }
-
+}
