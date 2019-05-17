@@ -8,7 +8,7 @@ node {
         println commit_id
     
         stage "build"
-        def app = docker.build "aarshad88/workoutapp:0.1.1-SNAPSHOT"
+        def app = docker.build -f "aarshad88/workoutapp:0.1.1-SNAPSHOT"
     
         stage "publish"
         app.push 'master'
