@@ -7,9 +7,9 @@ node {
         def commit_id = readFile('.git/commit-id').trim()
         println commit_id
     
-        stage "build"
+    stage "build"{
         def app = docker.build -f "aarshad88/workoutapp:0.1.1-SNAPSHOT"
-    
+    }
         stage "publish"
         app.push 'master'
         app.push "${commit_id}"
