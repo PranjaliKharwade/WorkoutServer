@@ -1,4 +1,4 @@
-# Start with the base image containing Java runtim
+# Start with the base image containing Java runtime
 #FROM openjdk:8
 FROM aarshad88/workoutapp:0.0.1-SNAPSHOT
 # Add a volume pointing to /tmp
