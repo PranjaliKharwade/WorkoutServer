@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.cognizant</groupId>
-	<artifactId>WorkoutServer</artifactId>
+	<artifactId>workoutserver</artifactId>
 	<version>${revision}</version>
 	<packaging>jar</packaging>
 
-	<name>Workout</name>
+	<name>workout</name>
 	<description>Workout Application Project</description>
 
 	<parent>
@@ -80,7 +80,7 @@
 	<version>1.4.0</version>
 				
 	<configuration>
-		<repository>WorkoutServer</repository>
+		<repository>workoutserver</repository>
 		<username>pranjalikharwade10@gmail.com</username>
          	<password>Meenal@1993</password>
 		<dockerDirectory>${project.basedir}</dockerDirectory>
