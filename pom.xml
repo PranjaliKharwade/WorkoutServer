@@ -80,9 +80,9 @@
 	<version>1.4.0</version>
 				
 	<configuration>
-		<repository>aarshad88/workoutapp</repository>
-		<username>aarshad88</username>
-         	<password>Parle-G12345</password>
+		<repository>WorkoutServer</repository>
+		<username>pranjalikharwade10@gmail.com</username>
+         	<password>Meenal@1993</password>
 		<dockerDirectory>${project.basedir}</dockerDirectory>
 		<tag>${project.version}.${git-revision}</tag>
 			<buildArgs>
