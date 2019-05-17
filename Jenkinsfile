@@ -5,9 +5,7 @@ node {
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
         println commit_id
-		stage "maven"
-		withMaven(maven : 'maven_3_6_1') {
-        sh 'mvn package'
+		
         stage "build"
         def app = docker.build "aarshad88/workoutapp:0.1.1-SNAPSHOT"
     
