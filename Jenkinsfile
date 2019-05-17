@@ -1,5 +1,5 @@
 node {
-    docker.withRegistry('aarshad88 / workoutapp', 'aarshad88') {
+    
     
         git url: "https://github.com/PranjaliKharwade/WorkoutServer", credentialsId: 'pranjalikharwade10@gmail.com'
     
@@ -14,4 +14,4 @@ node {
         app.push 'master'
         app.push "${commit_id}"
     }
-}
+
