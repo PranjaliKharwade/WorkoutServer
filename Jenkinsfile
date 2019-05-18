@@ -1,7 +1,7 @@
 node {
     
     
-        git url: "https://github.com/PranjaliKharwade/WorkoutServer", credentialsId: 'pranjalikharwade10@gmail.com'
+        git url: "https://github.com/PranjaliKharwade/workoutserver", credentialsId: 'pranjalikharwade10@gmail.com'
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
