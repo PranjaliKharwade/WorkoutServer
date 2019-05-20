@@ -1,0 +1,12 @@
+node {
+  stage 'Checkout'
+  checkout scm
+
+  stage 'Build'
+
+  /* Call the Maven build without tests. */
+  mvn "test"
+
+  stage 'Test'
+  mvn "test"
+}
