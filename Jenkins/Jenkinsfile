@@ -6,7 +6,7 @@ node {
 
   /* Call the Maven build without tests. */
   /* mvn "test" */
-echo $pwd
+echo 'pwd'
   stage 'Test'
   /* mvn "test" */
 echo 'hotname'
