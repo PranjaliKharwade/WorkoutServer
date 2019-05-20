@@ -5,8 +5,10 @@ node {
   stage 'Build'
 
   /* Call the Maven build without tests. */
-  mvn "test"
-
+  #mvn "test"
+echo $pwd
   stage 'Test'
-  mvn "test"
+  #mvn "test"
+echo 'hotname'
 }
+
