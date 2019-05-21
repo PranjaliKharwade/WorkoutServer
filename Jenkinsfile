@@ -11,12 +11,7 @@ pipeline {
             steps { 
                 sh 'mvn package'
                echo 'This is to build code.'
-                stage "Run"
-        docker.build 
-    
-        stage "publish"
-        app.push 'master'
-        app.push "first"
+                sh 'docker build -t "myimage" .'
                 
             }
         }
