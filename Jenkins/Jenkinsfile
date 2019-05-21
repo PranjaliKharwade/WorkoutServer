@@ -3,6 +3,7 @@ pipeline {
     stages { 
         stage('test') { 
             steps { 
+                mvn test
                echo 'This is a minimal pipeline.' 
             }
         }
