@@ -8,9 +8,10 @@ node {
         println commit_id
     
         stage "build"
-        def app = docker.build "aarshad88/workoutapp:0.1.1-SNAPSHOT"
+    def app = docker.build -t "${commit_id}".
     
         stage "publish"
         app.push 'master'
         app.push "${commit_id}"
+    
   }
