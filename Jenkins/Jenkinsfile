@@ -5,7 +5,7 @@ node {
   stage 'Build'
 
   /* Call the Maven build without tests. */
-  mvn "test"
+  mvn test
 
   stage 'Test'
   mvn "test"
