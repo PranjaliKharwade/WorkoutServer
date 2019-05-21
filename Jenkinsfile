@@ -12,7 +12,7 @@ pipeline {
                 sh 'mvn package'
                echo 'This is to build code.'
                 stage "Run"
-        def app = docker.build .
+        docker.build aarshad88 + ":$BUILD_NUMBER"
     
         stage "publish"
         app.push 'master'
