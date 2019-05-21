@@ -10,7 +10,13 @@ pipeline {
          stage('Build') { 
             steps { 
                 sh 'mvn package'
-               echo 'This is Test1.'
+               echo 'This is to build code.'
+                stage "Run"
+        def app = docker.build .
+    
+        stage "publish"
+        app.push 'master'
+        app.push "${commit_id}"
                 
             }
         }
