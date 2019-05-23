@@ -4,7 +4,7 @@ FROM aarshad88/workoutapp:0.0.1-SNAPSHOT
 # Add a volume pointing to /tmp
 VOLUME /tmp
 # Make port 8081 available to the world outside this container
-EXPOSE 8090
+EXPOSE 8090  
 # The application's jar file
 ARG JAR_FILE=target/workoutserver-null.jar
 # Add the application's jar to the container
