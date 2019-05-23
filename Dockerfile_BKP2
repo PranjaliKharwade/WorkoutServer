@@ -11,5 +11,5 @@ ARG JAR_FILE
 # Add the application's jar to the container
 ADD ${JAR_FILE} /var/lib/jenkins/workspace/Build_Image/test
 #COPY ${JAR_FILE} /var/lib/jenkins/workspace/Test_Job/test/
-#  Run the jar file
+#  Run the jar file 
 ENTRYPOINT ["java","-jar","/hello-world.jar"]
